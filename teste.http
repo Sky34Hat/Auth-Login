@@ -1,0 +1,81 @@
+###
+//SERVIDOR DE TESTE, PARA VER SE ESTÁ ON!
+GET http://localhost:3001/health HTTP/1.1
+
+
+###
+//MOSTRA TODOS OS USUARIOS
+GET http://localhost:3001/users HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiYnJ1bm8uY2hhZ2FzQGdtYWlsLmNvbSIsImlhdCI6MTc3Mzg1NzIxNSwiZXhwIjoxNzczODYwODE1fQ.AmOWQPlps2mTX5ufjMBB0DTqbVOy9lqpXRQOEJSewWE
+
+###
+//BUSCA PELO USUARIO PELO ID
+GET http://localhost:3001/users/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiYnJ1bm8uY2hhZ2FzQGdtYWlsLmNvbSIsImlhdCI6MTc3MzY4MzA3NywiZXhwIjoxNzczNjg2Njc3fQ.mQtokumQay4AcvhtU05RdPVdg0MCR8lrnBlsgtSym5w
+
+###
+//CADASTRA UM USÚARIO
+POST http://localhost:3001/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Bruno Chagas",
+    "email": "bruno.chagas@gmail.com",
+    "password": "bruno123"
+}
+
+####
+
+POST http://localhost:3001/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Arthur",
+    "email": "arthur.sausen@gmail.com",
+    "password": "arthur123"
+}
+
+###
+
+//LOGIN
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+    "email": "bruno.chagas@gmail.com",
+    "password": "bruno123"
+}
+
+
+###
+
+//LOGIN
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+    "email": "arthur.sausen@gmail.com",
+    "password": "arthur123"
+}
+
+#####
+
+GET  http://localhost:3001/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiYnJ1bm8uY2hhZ2FzQGdtYWlsLmNvbSIsImlhdCI6MTc3MzY4MzA3NywiZXhwIjoxNzczNjg2Njc3fQ.mQtokumQay4AcvhtU05RdPVdg0MCR8lrnBlsgtSym5w
+
+###
+
+GET  http://localhost:3001/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiYnJ1bm8uY2hhZ2FzQGdtYWlsLmNvbSIsImlhdCI6MTc3Mzg2MjkzMSwiZXhwIjoxNzczODY2NTMxfQ.BI9aYP9I9MrjoNq8jKwdG1XffcBiqqdMCLfe5ohq0AY
+
+###
+
+//LOGIN
+POST http://localhost:3001/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiYXJ0aHVyLnNhdXNlbkBnbWFpbC5jb20iLCJpYXQiOjE3NzM4NjM3MjcsImV4cCI6MTc3Mzg2NzMyN30.lP_mWO2MXUNvHJEQhhRPPT1pyVsQjlBRzvSAoHir7C0
+
+{
+    "content": "post arthur",
+    "title": "arthur123"
+}
